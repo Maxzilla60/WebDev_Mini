@@ -4,11 +4,11 @@
     <div class="box">
         <h3>Add a student</h3>
         <form action="<?php echo URL; ?>webdev/addsong" method="POST">
-            <label>Artist</label>
+            <label>Name</label>
             <input type="text" name="artist" value="" required />
-            <label>Track</label>
-            <input type="text" name="track" value="" required />
-            <label>Link</label>
+            <label>Number</label>
+            <input type="number" name="track" value="" required />
+            <label>Richting</label>
             <input type="text" name="link" value="" />
             <input type="submit" name="submit_add_song" value="Submit" />
         </form>
@@ -24,14 +24,14 @@
             <button id="javascript-ajax-button">Click here to get the amount of songs via Ajax (will be displayed in #javascript-ajax-result-box)</button>
             <div id="javascript-ajax-result-box"></div>
         </div>-->
-        <h3>List of songs (data from first model)</h3>
+        <h3>List of Students</h3>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
                 <td>Id</td>
-                <td>Artist</td>
-                <td>Track</td>
-                <td>Link</td>
+                <td>Name</td>
+                <td>Number</td>
+                <td>Richting</td>
                 <td>DELETE</td>
                 <!--<td>EDIT</td>-->
             </tr>
