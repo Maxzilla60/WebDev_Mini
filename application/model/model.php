@@ -36,4 +36,16 @@ class Model
 
         $query->execute($parameters);
     }
+
+
+    public function getStudent($student_id)
+    {
+        $sql = "SELECT id, name, number, richting FROM students WHERE id = :student_id LIMIT 1";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':student_id' => $student_id);
+
+        $query->execute($parameters);
+
+        return $query->fetch();
+    }
 }
