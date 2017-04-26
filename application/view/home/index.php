@@ -1,5 +1,5 @@
 <div class="container">
-	<img src="/img/mini-logo.png"></img>
+	<img style="width: 100%" src="/img/mini-logo.png"></img>
 	<p>MINI is an extremely simple and easy to understand skeleton PHP application, reduced to the max.
 	MINI is NOT a professional framework and it does not come with all the stuff real frameworks have.
 	If you just want to show some pages, do a few database calls and a little-bit of AJAX here and there, without
