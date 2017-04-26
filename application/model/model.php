@@ -48,4 +48,14 @@ class Model
 
         return $query->fetch();
     }
+
+    public function updateSong($name, $number, $richting, $student_id)
+    {
+        $sql = "UPDATE student SET name = :name, number = :number, richting = :richting WHERE id = :student_id";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':name' => $name, ':number' => $number, ':richting' => $richting, ':student_id' => $student_id);
+
+
+        $query->execute($parameters);
+    }
 }

@@ -46,4 +46,16 @@ class WebDev extends Controller
             header('location: ' . URL . 'webdev/index');
         }
     }
+    
+    public function updateStudent()
+    {
+        // if we have POST data to create a new song entry
+        if (isset($_POST["submit_update_student"])) {
+            // do updateSong() from model/model.php
+            $this->model->updateStudent($_POST["name"], $_POST["number"],  $_POST["richting"], $_POST['student_id']);
+        }
+
+        // where to go after song has been added
+        header('location: ' . URL . 'webdev/index');
+    }
 }
