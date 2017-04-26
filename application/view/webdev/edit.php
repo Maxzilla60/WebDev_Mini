@@ -20,4 +20,5 @@
             <input type="submit" name="submit_update_student" value="Update" />
         </form>
     </div>
+    <!-- pas aub goed aan -->
 </div>

@@ -46,7 +46,7 @@ class WebDev extends Controller
             header('location: ' . URL . 'webdev/index');
         }
     }
-    
+
     public function updateStudent()
     {
         // if we have POST data to create a new song entry
