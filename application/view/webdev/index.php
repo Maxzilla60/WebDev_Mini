@@ -14,7 +14,7 @@
     
     <div class="box">
         <h3>List of Students</h3>
-        <table>
+        <table style="width: 100%;">
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
                 <td>Id</td>
