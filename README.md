@@ -1,6 +1,6 @@
 # MINI is koel
 ## Todo
-- [ ] Database: Studenten (id, name, number, richting)
+- [x] Database: Studenten (id, name, number, richting)
 - [ ] View: Dingen hernoemen
 - [ ] Controller: addStudent()
 - [x] Model: Aanpassen aan Database

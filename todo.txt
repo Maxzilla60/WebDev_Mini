@@ -1,4 +1,0 @@
-- Database: Studenten (id, name, number, richting)
-- View: Dingen hernoemen
-- Controller: addStudent()
-- Model: Aanpassen aan Database
