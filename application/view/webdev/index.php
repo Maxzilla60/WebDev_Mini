@@ -1,29 +1,18 @@
 <div class="container">
-    <!--<h2>You are in the View: application/view/song/index.php (everything in this box comes from that file)</h2>-->
-    <!-- add song form -->
     <div class="box">
         <h3>Add a student</h3>
-        <form action="<?php echo URL; ?>webdev/addsong" method="POST">
+        <form action="<?php echo URL; ?>webdev/addstudent" method="POST">
             <label>Name</label>
-            <input type="text" name="artist" value="" required />
+            <input type="text" name="name" value="" required />
             <label>Number</label>
-            <input type="number" name="track" value="" required />
+            <input type="number" name="number" value="" required />
             <label>Richting</label>
-            <input type="text" name="link" value="" />
-            <input type="submit" name="submit_add_song" value="Submit" />
+            <input type="text" name="richting" value="" />
+            <input type="submit" name="submit_add_student" value="Submit" />
         </form>
     </div>
-    <!-- main content output -->
+    
     <div class="box">
-        <!--<h3>Amount of songs (data from second model)</h3>
-        <div>
-            <?php echo $amount_of_songs; ?>
-        </div>
-        <h3>Amount of songs (via AJAX)</h3>
-        <div>
-            <button id="javascript-ajax-button">Click here to get the amount of songs via Ajax (will be displayed in #javascript-ajax-result-box)</button>
-            <div id="javascript-ajax-result-box"></div>
-        </div>-->
         <h3>List of Students</h3>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">
@@ -33,22 +22,17 @@
                 <td>Number</td>
                 <td>Richting</td>
                 <td>DELETE</td>
-                <!--<td>EDIT</td>-->
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($songs as $song) { ?>
+            <?php foreach ($students as $student) { ?>
                 <tr>
-                    <td><?php if (isset($song->id)) echo htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?></td>
-                    <td><?php if (isset($song->artist)) echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8'); ?></td>
-                    <td><?php if (isset($song->track)) echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8'); ?></td>
-                    <td>
-                        <?php if (isset($song->link)) { ?>
-                            <a href="<?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?></a>
-                        <?php } ?>
+                    <td><?php if (isset($student->id)) echo htmlspecialchars($student->id, ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php if (isset($student->name)) echo htmlspecialchars($student->name, ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php if (isset($student->number)) echo htmlspecialchars($student->number, ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php if (isset($student->richting)) echo htmlspecialchars($student->richting, ENT_QUOTES, 'UTF-8'); ?></td>
                     </td>
-                    <td><a href="<?php echo URL . 'webdev/deletesong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
-                    <!--<td><a href="<?php echo URL . 'webdev/editsong/' . htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>-->
+                    <td><a href="<?php echo URL . 'webdev/deletestudent/' . htmlspecialchars($student->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
                 </tr>
             <?php } ?>
             </tbody>

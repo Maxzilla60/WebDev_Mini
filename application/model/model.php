@@ -12,7 +12,7 @@ class Model
     }
 
     public function getAllStudents() {
-        $sql = "SELECT * FROM students";
+        $sql = "SELECT id, name, number, richting FROM students";
         $query = $this->db->prepare($sql);
         $query->execute();
       
@@ -28,6 +28,18 @@ class Model
         $sql = "INSERT INTO students (name, number, richting) VALUES (:name, :number, :richting)";
         $query = $this->db->prepare($sql);
         $parameters = array(':name' => $name, ':number' => $number, ':richting' => $richting);
+
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
+
+        $query->execute($parameters);
+    }
+
+    public function deleteStudent($student_id)
+    {
+        $sql = "DELETE FROM students WHERE id = :student_id";
+        $query = $this->db->prepare($sql);
+        $parameters = array(':student_id' => $student_id);
 
         // useful for debugging: you can see the SQL behind above construction by using:
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
