@@ -5,4 +5,4 @@
 - [x] Controller: addStudent()
 - [x] Model: Aanpassen aan Database
 - [x] Security: SQL Injection & Cross-site Scripting
-- [ ] Extra: editStudent()
+- [x] Extra: editStudent()
