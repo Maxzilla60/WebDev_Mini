@@ -29,7 +29,7 @@ class WebDev extends Controller
         header('location: ' . URL . 'webdev/index');
     }
 
-    public function editStudent()
+    public function editStudent($student_id)
     {
         if (isset($student_id)) {
             $student = $this->model->getStudent($student_id);

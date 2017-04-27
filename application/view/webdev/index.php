@@ -22,6 +22,7 @@
                 <td>Number</td>
                 <td>Richting</td>
                 <td>DELETE</td>
+                <td>EDIT</td>
             </tr>
             </thead>
             <tbody>
@@ -31,8 +32,8 @@
                     <td><?php if (isset($student->name)) echo htmlspecialchars($student->name, ENT_QUOTES, 'UTF-8'); ?></td>
                     <td><?php if (isset($student->number)) echo htmlspecialchars($student->number, ENT_QUOTES, 'UTF-8'); ?></td>
                     <td><?php if (isset($student->richting)) echo htmlspecialchars($student->richting, ENT_QUOTES, 'UTF-8'); ?></td>
-                    </td>
                     <td><a href="<?php echo URL . 'webdev/deletestudent/' . htmlspecialchars($student->id, ENT_QUOTES, 'UTF-8'); ?>">delete</a></td>
+                    <td><a href="<?php echo URL . 'webdev/editstudent/' . htmlspecialchars($student->id, ENT_QUOTES, 'UTF-8'); ?>">edit</a></td>
                 </tr>
             <?php } ?>
             </tbody>
